@@ -24,17 +24,17 @@ A comprehensive Full-Stack Employee Management System that enables users to perf
 - React Router
 - Axios
 # API Endpoints
-🔐 Authentication Routes
-Method	Endpoint	Protection	Description
-POST	/api/auth/register	Public	Register a new user
-POST	/api/auth/login	Public	Login a user and get JWT token
-POST	/api/auth/logout	Public	Logout user (client-side token removal)
-👨‍💼 Employee Management Routes
-Method	Endpoint	Protection	Description
-POST	/api/employees/	Protected	Create new employee with profile picture upload (Cloudinary)
-GET	/api/employees/	Protected	Get list of employees with pagination & search
-PUT	/api/employees/:id	Protected	Update employee details by ID
-DELETE	/api/employees/:id	Protected	Delete employee by ID
+🔐 ## Authentication Routes
+- Method	Endpoint	Protection	Description
+- POST:/auth/register	Public	Register a new user
+- POST:/auth/login	Public	Login a user and get JWT token
+- POST:/auth/logout	Public	Logout user (client-side token removal)
+👨‍💼  ## Employee Management Routes
+- Method	Endpoint	Protection	Description
+- POST:/employees/	Protected	Create new employee with profile picture upload (Cloudinary)
+- GET	:/employees/	Protected	Get list of employees with pagination & search
+- PUT	:/employees/:id	Protected	Update employee details by ID
+- DELETE:/employees/:id	Protected	Delete employee by ID
 
 
 
