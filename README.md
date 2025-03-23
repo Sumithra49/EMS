@@ -1,5 +1,13 @@
 # Full-Stack Employee Management System
 A comprehensive Full-Stack Employee Management System that enables users to perform CRUD operations on employee records, including uploading profile pictures using Cloudinary. This project incorporates MongoDB, Express.js, React.js, Redux, and JWT-based authentication to ensure secure, scalable, and responsive functionality.
+## Folder Structure
+# Backend
+ ![image](https://github.com/user-attachments/assets/195dd4f4-177e-4982-8be8-5cb2e39c3493)
+# frontend
+![image](https://github.com/user-attachments/assets/a954a7cc-74f5-4390-b5d8-def07de9a85a)
+![image](https://github.com/user-attachments/assets/6b25eecf-e966-4971-907e-b295bc00d445)
+
+
 
   # Features
 - Employee CRUD (Create, Read, Update, Delete) Operations-
