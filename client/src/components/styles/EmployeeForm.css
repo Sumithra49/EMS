@@ -1,0 +1,42 @@
+/* EmployeeForm.css */
+
+.employee-form {
+    background-color: #f9f9f9;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .employee-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #34495e;
+  }
+  
+  .employee-form input[type="text"],
+  .employee-form input[type="file"] {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .employee-form button {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .employee-form button:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,56 @@
+/* EmployeeList.css */
+
+.employee-list-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .employee-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .loading,
+  .error,
+  .no-employees {
+    text-align: center;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  
+  .employee-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .employee-card {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .employee-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .employee-info h3 {
+    margin: 10px 0 5px 0;
+    color: #34495e;
+  }
+  
+  .employee-info p {
+    margin: 5px 0;
+    color: #7f8c8d;
+  }
+  
