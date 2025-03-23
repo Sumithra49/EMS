@@ -63,6 +63,10 @@ A comprehensive Full-Stack Employee Management System that enables users to perf
 ## When click on Delete button
 ![image](https://github.com/user-attachments/assets/1c2b971d-db01-4ded-85b2-6cc76bce9bdb)
 
+## Employee page
+![image](https://github.com/user-attachments/assets/2ccffc07-4654-4786-b86f-044ae1e2d2ff)
+
+
 
 
 
