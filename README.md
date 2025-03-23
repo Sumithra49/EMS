@@ -11,18 +11,18 @@ A comprehensive Full-Stack Employee Management System that enables users to perf
 
 # Tech Stack
 # Backend:
-Node.js
-Express.js
-MongoDB + Mongoose
-Multer (File Upload)
-Cloudinary (Image Hosting)
-JWT (Authentication)
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- Multer (File Upload)
+- Cloudinary (Image Hosting)
+- JWT (Authentication)
 
 # Frontend:
-React.js
-Redux Toolkit
-React Router
-Axios
+- React.js
+- Redux Toolkit
+- React Router
+- Axios
 
 
 
