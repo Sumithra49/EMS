@@ -32,3 +32,15 @@ exports.login = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+// LOGOUT
+exports.logout = async (req, res) => {
+  try {
+    // If token is in cookies, clear it
+    res.clearCookie("token"); // Only if you're using cookies
+
+    // Inform client to delete token
+    res.status(200).json({ message: "User logged out successfully" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
