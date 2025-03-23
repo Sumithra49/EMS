@@ -23,9 +23,12 @@ export const fetchEmployees = () => async (dispatch) => {
       dispatch({ type: FETCH_EMPLOYEES_FAILURE, payload: "No token found" });
       return;
     }
-    const response = await axios.get("http://localhost:8080/employees/", {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const response = await axios.get(
+      "https://ems-1-nv8e.onrender.com/employees/",
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     console.log("Fetched Data:", response.data);
 
     dispatch({
@@ -51,7 +54,7 @@ export const addEmployee = (employeeData) => async (dispatch) => {
       },
     };
     const response = await axios.post(
-      "http://localhost:8080/employees/",
+      "https://ems-1-nv8e.onrender.com/employees/",
       employeeData,
       config
     );
@@ -66,7 +69,7 @@ export const updateEmployee = (id, updatedData) => async (dispatch) => {
   const token = localStorage.getItem("token");
   try {
     const response = await axios.put(
-      `http://localhost:8080/employees/${id}`,
+      `https://ems-1-nv8e.onrender.com/employees/${id}`,
       updatedData,
       {
         headers: { Authorization: `Bearer ${token}` },
@@ -82,7 +85,7 @@ export const updateEmployee = (id, updatedData) => async (dispatch) => {
 export const deleteEmployee = (id) => async (dispatch) => {
   const token = localStorage.getItem("token");
   try {
-    await axios.delete(`http://localhost:8080/employees/${id}`, {
+    await axios.delete(`https://ems-1-nv8e.onrender.com/employees/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     dispatch({ type: DELETE_EMPLOYEE_SUCCESS, payload: id });

@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchEmployees } from "../redux/actions/employeeActions";
+import {
+  deleteEmployee,
+  fetchEmployees,
+  updateEmployee,
+} from "../redux/actions/employeeActions";
 
 import "./styles/EmployeeList.css";
 
@@ -11,6 +15,27 @@ const EmployeeList = () => {
   useEffect(() => {
     dispatch(fetchEmployees());
   }, [dispatch]);
+
+  const handleDelete = (id) => {
+    if (window.confirm("Are you sure you want to delete this employee?")) {
+      dispatch(deleteEmployee(id));
+    }
+  };
+
+  const handleEdit = (employee) => {
+    const newName = prompt("Enter new name:", employee.name);
+    const newPosition = prompt("Enter new position:", employee.position);
+    const newContact = prompt("Enter new contact:", employee.contact);
+
+    if (newName && newPosition && newContact) {
+      const updatedData = {
+        name: newName,
+        position: newPosition,
+        contact: newContact,
+      };
+      dispatch(updateEmployee(employee._id, updatedData));
+    }
+  };
 
   if (loading) {
     return <p className="loading">Loading...</p>;
@@ -43,6 +68,20 @@ const EmployeeList = () => {
                   <h3>{employee.name}</h3>
                   <p>{employee.position}</p>
                   <p>{employee.contact}</p>
+                </div>
+                <div className="employee-actions">
+                  <button
+                    className="edit-btn"
+                    onClick={() => handleEdit(employee)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="delete-btn"
+                    onClick={() => handleDelete(employee._id)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </li>
             ))}

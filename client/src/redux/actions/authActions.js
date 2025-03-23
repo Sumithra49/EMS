@@ -13,7 +13,7 @@ export const REGISTER_FAILURE = "REGISTER_FAILURE";
 export const login = (credentials) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "http://localhost:8080/auth/login",
+      "https://ems-1-nv8e.onrender.com/auth/login",
       credentials
     );
     const { token, user } = response.data;
@@ -34,7 +34,7 @@ export const login = (credentials) => async (dispatch) => {
 export const register = (userData) => async (dispatch) => {
   try {
     const response = await axios.post(
-      "http://localhost:8080/auth/register",
+      "https://ems-1-nv8e.onrender.com/auth/register",
       userData
     );
     dispatch({ type: REGISTER_SUCCESS, payload: response.data });

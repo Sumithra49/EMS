@@ -1,17 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-import "./styles/Navbar.css"; // Importing CSS
+import Logout from "../pages/LogoutPage";
+import "./styles/Navbar.css";
 
-const Navbar = () => (
-  <nav className="navbar">
-    <h1>Employees Management System</h1>
-    <ul className="nav-list">
-      <li className="nav-item">
-        <Link to="/" className="nav-link"></Link>
-      </li>
-    </ul>
-  </nav>
-);
+const Navbar = () => {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
+  return (
+    <nav className="navbar">
+      <h1 t>Employees Management System</h1>
+      <ul className="nav-list">
+        {isAuthenticated && (
+          <li className="nav-item">
+            <Logout />
+          </li>
+        )}
+      </ul>
+    </nav>
+  );
+};
 
 export default Navbar;
